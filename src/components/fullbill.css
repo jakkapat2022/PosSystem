@@ -1,0 +1,131 @@
+.container-a4 {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    
+}
+
+.container-a4 .a4 {
+    width: 826px;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); */
+    /* height: 1169px; */
+}
+
+.container-a4 .a4 .header {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-a4 .a4 .sub-header{
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-a4 .a4 .sub-header .sub-con-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-a4 .a4 .sub-header .sub-con-header h3{
+    margin: 0rem 1rem;
+}
+
+.container-a4 .a4 .content-header h3{
+    padding: 0.2rem 0rem;
+}
+
+.container-a4 .a4 .content-header {
+    padding: 0.2rem 2rem;
+}
+
+.container-a4 .a4 .content-header .sub-con-header{
+    display: flex;
+}
+
+
+.container-a4 .a4 .content-header .sub-con-header h3{
+    margin-right: 1rem;
+}
+
+.container-a4 .a4 .table-content {
+    padding: 2rem;
+}
+
+.container-a4 .a4 .table-content table {
+    width: 100%;
+    border-collapse: collapse;
+    border: solid 1px #8b8b8b;
+}
+
+.container-a4 .a4 .table-content table tr th {
+    border: solid 1px #8b8b8b;
+    padding: 0.8rem 0rem;
+
+}
+
+.container-a4 .a4 .table-content table tr #number {
+    width: 80px;
+}
+
+.container-a4 .a4 .table-content table tr #list {
+    width: 400px;
+}
+
+.container-a4 .a4 .table-content table tr #unit,
+.container-a4 .a4 .table-content table tr #value {
+    width: 80px;
+}
+
+.container-a4 .a4 .table-content table tr th{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.container-a4 .a4 .table-content table #product td {
+    border-left: solid 1px #8b8b8b;
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+}
+
+.container-a4 .a4 .table-content table #product #number,
+.container-a4 .a4 .table-content table #product #value,
+.container-a4 .a4 .table-content table #product #unit,
+.container-a4 .a4 .table-content table #product #total {
+    text-align: center;
+}
+
+.container-a4 .a4 .table-content table #vated {
+    border-top: solid 1px #8b8b8b;
+}
+
+.container-a4 .a4 .table-content table #totallast td,
+.container-a4 .a4 .table-content table #vated2 td,
+.container-a4 .a4 .table-content table #vated td {
+    padding: 0.5rem;
+    font-size: 18px;
+    border-right: solid 1px #8b8b8b;
+}
+
+.container-a4 .a4 .table-content table #totallast #total,
+.container-a4 .a4 .table-content table #vated2 #total,
+.container-a4 .a4 .table-content table #vated #total {
+    padding: 0.5rem;
+    font-size: 18px;
+    text-align: center;
+}
+
+.container-a4 .a4 .table-content table #totallast,
+.container-a4 .a4 .table-content table #vated,
+.container-a4 .a4 .table-content table #vated2{
+    
+    text-align: end;
+}

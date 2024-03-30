@@ -1,0 +1,142 @@
+.light-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #484848;
+    opacity: 50%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+.StockAdj-con {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem;
+}
+
+.StockAdj-con .content {
+    width: 100%;
+}
+
+.StockAdj-con .content .table {
+    margin-top: 2rem;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.StockAdj-con .content .header {
+    width: 100%;
+    padding: 0rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.StockAdj-con .content .header h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.StockAdj-con .content .header button {
+    background: #0bb060;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s ease;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0rem 1rem;
+
+    &:hover{
+        background: #076738;
+    }
+}
+
+.StockAdj-con .content #input {
+    width: 40%;
+}
+
+.StockAdj-con .content #input-field{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    padding: 2rem;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    background: #fff;
+}
+
+#selectProduct{
+    width: 100%;
+    overflow-y: auto;
+    height: 350px;
+}
+
+#selectProduct .option-dropdown{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover{
+        background: #717171;
+    }
+}
+
+#selectProduct .option-dropdown img {
+    margin-right: 1rem;
+    mix-blend-mode: multiply;
+}
+
+.StockAdj-con .content #input-field button{
+    padding: 0.5rem 1rem;
+    background: #0bb060;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+}
+
+.StockAdj-con .content .input-field{ 
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 50;
+    transition: all 0.6s ease;
+}
+
+.StockAdj-con .content .show-input #input,
+.StockAdj-con .content .input-field #input{
+    width: 100%;
+}
+
+.show-input{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 50;
+    transition: all 0.6s ease;
+}
+
+#addProduct {
+    width: 200px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background: #0bb060;
+    transition: all 0.6s ease;
+    border: none;
+    margin: 0rem 1rem;
+
+    &:hover{
+        background: #076738;
+    }
+}

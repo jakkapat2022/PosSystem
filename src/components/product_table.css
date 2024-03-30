@@ -1,0 +1,80 @@
+.product-table-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-table-box table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-table-box table th {
+    background: #04AA6D;
+    color: white;
+    padding: 1.5rem 0rem;
+    border: none;
+}
+
+.product-table-box table .item-colum #id,
+.product-table-box table .item-colum #barcode,
+.product-table-box table .item-colum #ctg,
+.product-table-box table .item-colum #cost,
+.product-table-box table .item-colum #price,
+.product-table-box table .item-colum #stock {
+    text-align: center;
+}
+
+.product-table-box table tr {
+    border-bottom: 1px solid #9c9c9c;
+}
+
+.product-table-box table tr:hover {
+    background: #999999;
+}
+
+.product-table-box table .item-colum #img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-table-box table .item-colum #img img {
+    padding: 1rem;
+    width: 90px;
+}
+
+.update-item-blog {
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+.update-item-content {
+    width: 600px;
+    padding: 2rem;
+
+}
+
+.update-item-content button {
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    background: #04AA6D;
+}
+
+.update-item-content-img {
+    padding: 2rem;
+    width: 400px;
+}
+
+.update-item-content-img img {
+    width: 100%;
+}

@@ -1,0 +1,100 @@
+.ctg-container {
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+.ctg-table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.ctg-input-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ctg-input-box .input-blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.ctg-input-box .input-blog input {
+    padding: 0.5rem 1rem;
+    font-size: 20px;
+    font-weight: 600;
+    background: #d3d3d3;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0.5rem 0rem;
+}
+
+.ctg-input-box .input-blog button {
+    padding: 0.5rem 1rem;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #0eb467;
+    color: #fff;
+    margin-top: 0.5rem;
+}
+
+.ctg-table-header .ctg-header{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.ctg-table-header .ctg-add button {
+    padding: 0.5rem 1.5rem;
+    background: #0e48b4;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    transition: all 0.6s ease;
+}
+
+.ctg-table-header .ctg-add button:hover {
+    background: #0a317a;
+}
+
+.filter-btn{
+    border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+    height: 34px;
+	width: 32px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    border: none;
+    outline: none;
+    background: #0eb467;
+    color: #fff;
+}
+
+.ctg-container .ctg-box{
+    padding-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.ctg-table {
+    padding-top: 1rem;
+    font-size: 20px;
+}

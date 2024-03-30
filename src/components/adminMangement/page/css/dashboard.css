@@ -1,0 +1,12 @@
+.dash-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.dash-con .dash-content{
+    width: 100%;
+    height: 900px;
+}

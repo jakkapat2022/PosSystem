@@ -1,0 +1,277 @@
+.container-sele {
+    display: flex;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.back-drop {
+    background: #616161;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    position: absolute;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.modal {
+    width: 700px;
+    height: 500px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-70%, -50%);
+}
+
+.modal .modal-header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    padding-left: 10rem;
+}
+
+.modal .modal-header h3 {
+    width: 200px;
+}
+
+.modal .modal-item {
+    width: 100%;
+    height: 450px;
+    padding: 1rem 2rem;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.modal .modal-item .modal-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0.7rem;
+}
+
+.modal .modal-item .modal-content button{
+    background: #20a040;
+    border-radius: 8px;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    transition: none 0.5s ease;
+}
+
+.modal .modal-item .modal-content button:hover{
+    background: #0e6123;
+}
+
+.sele-product {
+    width: 70%;
+}
+
+.sortcut {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+.sele-product .sortcut {
+    width: 100%;
+    height: 100px;
+}
+
+
+.sele-product .sortcut .next,
+.sele-product .sortcut .prev,
+.sele-product .sortcut .pause-bill , .sele-product .sortcut .call-bill {
+    width: 100px;
+    height: 66px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sele-product .sortcut .next:hover,
+.sele-product .sortcut .prev:hover,
+.sele-product .sortcut .pause-bill:hover , .sele-product .sortcut .call-bill:hover {
+    background-color: #8e8e8e;
+}
+
+.sele-product .item-content {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    
+}
+
+.sele-product .item {
+    padding: 1rem;
+    width: 100%;
+    height: 460px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0.3rem;
+}
+
+.sele-product .item .item-blog {
+    width: 150px;
+    height: 180px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 0.3rem;
+}
+
+.sele-product .item .item-blog:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+
+.sele-product .item .item-blog .item-img {
+    width: 100%;
+    height: 120px;
+    padding: 0.3rem;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.sele-product .item .item-blog .item-img img {
+    width: 80%;
+}
+
+.sele-product .item .item-blog .item-text {
+    padding: 0rem 1rem;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+    position: relative;
+}
+
+.sele-product .item .item-blog .item-text .warn #warning{
+    position: absolute;
+    top: -60px;
+    left: 10px;
+    color: rgb(207, 83, 83);
+    font-weight: 900;
+    background: #ffdede;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 26px;
+}
+
+.sele-product .item .item-blog .item-text .price {
+    position: absolute;
+    top: -115px;
+    right: 5px;
+    padding: 0.2rem 1rem;
+    background: #2eb9ef;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.sele-product .item .item-blog .item-text .price h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sele-product .item .item-blog .item-text h3 {
+    font-size: 15px;
+}
+
+.sale-pos {
+    width: 30%;
+    padding: 1rem;
+}
+
+.sale-pos .sale-content {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    overflow-y: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sale-pos .sale-content .sale-header {
+    width: 100%;
+    height: 50px;
+    padding: 0.3rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sale-pos .sale-content .sale-item {
+    padding: 0.5rem 1.4rem;
+    height: 350px;
+    overflow-y: auto;
+}
+
+.sale-pos .sale-content .sale-item .box .box-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #cacaca;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.sale-pos .sale-content .sale-item .box .box-item:hover {
+    background: #8e8e8e;
+}
+
+.sale-pos .sale-content .sale-item .box .box-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #cacaca;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.sale-pos .sale-content .sale-item .box .box-item .box-name {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.sale-pos .sale-content .sale-item .box .box-item .box-name h3 {
+    padding-right: 1.4rem;
+    padding-left: 1rem;
+}
+
+.sale-pos .sale-content .sale-footer {
+    padding: 0.3rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sale-pos .btn-sale {
+    padding: 0.5rem 2rem;
+    margin-top: 1.5rem;
+}
+
+.sale-pos .btn-sale button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    font-size: 30px;
+    padding: 0.5rem 1rem;
+    border-radius: 14px;
+    color: #ffffff;
+    background: #31149c;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.sale-pos .btn-sale button:hover {
+    background: #150940;
+}

@@ -1,0 +1,27 @@
+.Stockbill-container {
+    display: flex;
+    align-content: center;
+    padding: 2rem;
+}
+
+.Stockbill-container #input{
+    width: 30%;
+    flex-direction: column;
+}
+
+.Stockbill-container #input .input-data{
+    margin: 0.5rem 0rem;
+}
+
+.Stockbill-container #input .btn button {
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+    font-weight: 600;
+    background: rgb(195, 90, 90);
+    color: #fff;
+    border: none;
+}
+
+.Stockbill-container .table {
+    width: 70%;
+}
