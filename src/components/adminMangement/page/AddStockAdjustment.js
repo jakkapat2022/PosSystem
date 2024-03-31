@@ -2,12 +2,13 @@ import React, { useState ,useEffect } from 'react'
 import { SideBar , Container} from '../../SideBar'
 import { useNav } from '../../layout/Nav'
 import { ReactTable } from '../component/ReactTable'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation , useNavigate} from 'react-router-dom'
 import './css/stockadjustment.css'
 import axios from 'axios'
+import ConfirmForm from '../auth/ConfirmForm'
 let api_url = process.env.REACT_APP_API_URL;
 
-class Adjust{
+export class Adjust{
 
     constructor(api_url,id_adjust,productlist,currentStock){
         this.api = api_url;
@@ -45,18 +46,42 @@ class Adjust{
         }
     }
 
+    async updateCommit(){
+        try {
+            const results = await axios.post(`${this.api}stock/adjust/commit`,{
+                id_adjust: this.id_adjust
+            })
+            return results
+        } catch (error) {
+            return error
+        }
+    }
+
+    async updoCommit(){
+        try {
+            const results = await axios.post(`${this.api}stock/adjust/undo`,{
+                id_adjust: this.id_adjust
+            })
+            return results
+        } catch (error) {
+            return error
+        }
+    }
+
 }
 
 const AddStockAdjustment = () => {
+    let navigate = useNavigate();
     const { state } = useLocation();
     const {showSideBar} = useNav();
     const [classinput, setClassInput] = useState(['input-field','show-input']);
     const [classinputState, setClassInputState] = useState(false);
     const [keyword , setKeyword] = useState('');
     const [opdata , setopdate] = useState([]);
-    const [selector,setSelector] = useState({});
+    const [selector,setSelector] = useState(null);
     const [AdjustChlidren,setAdjustChildren] = useState([]);
     const [stateSelector, setstateSelector] = useState(false);
+    const [ShowLogin,setShowLogin] = useState(false);
 
     const [nameadjust,setNameAdjust] = useState('');
     const [currentStock, setCurrentStock] = useState('');
@@ -103,15 +128,28 @@ const AddStockAdjustment = () => {
         }
     ]
 
+    //console.log(selector)
+
     const handle_create = async (id_adjust,productList) => {
+        if(selector == null || currentStock == 0) return alert('กรุนาเลือกสินค้า') & setClassInputState(!classinputState)
         const _class = new Adjust(api_url,id_adjust,productList,currentStock);
 
         const response = await _class.createAdjust();
 
-        console.log(response)
+        //console.log(response)
         setCountState(countState + 1);
-        setSelector({});
+        setSelector(null);
         setCurrentStock('');
+        setClassInputState(!classinputState)
+    }
+
+    const handle_commit = async () => {
+        const _class = new Adjust(api_url,nameadjust)
+
+        const response = await _class.updateCommit();
+        if(response.data == 'no data') return alert('กรุณาเพิ่มรายการ') & setShowLogin(false)
+
+        return navigate('/admin/stock/stockadjustment')
     }
 
     useEffect(() => {
@@ -141,6 +179,7 @@ const AddStockAdjustment = () => {
   return (
     <>
     <SideBar state={true}/>
+    {ShowLogin && <ConfirmForm functionNext={handle_commit} handleShow={setShowLogin}/>}
     {classinputState && <div className='light-box' onClick={handle_showAdd}></div>}
     <Container sideBar={showSideBar} className='container con-ani'>
         <div className='StockAdj-con'>
@@ -149,7 +188,7 @@ const AddStockAdjustment = () => {
                     <h3>สร้างใบปรับสต็อก</h3>
                     <div>   
                         <Link to={'/admin/stock/stockadjustment'}><button>บันทึกแบบร่าง</button></Link>
-                        <button>บันทึก</button>
+                        <button onClick={() => setShowLogin(!ShowLogin)}>บันทึก</button>
                     </div>
                 </div>
                 <div id='input-field' className={classinputState ? classinput[1] : classinput[0]}>

@@ -28,6 +28,7 @@ import AddProductStocks from './components/adminMangement/page/AddProductStocks'
 import StockBill from './components/adminMangement/page/StockBill';
 import StockAdjustment from './components/adminMangement/page/StockAdjustment';
 import AddStockAdjustment from './components/adminMangement/page/AddStockAdjustment';
+import SuccessStockAdjustment from './components/adminMangement/page/SuccessStockAdjustment';
 
 const router = createBrowserRouter([
   {
@@ -107,6 +108,10 @@ const router = createBrowserRouter([
   {
     path: '/admin/stock/stockadjustment/add',
     element: <AdminProtected><AddStockAdjustment/></AdminProtected>
+  },
+  {
+    path: '/admin/stock/stockadjustment/success',
+    element: <AdminProtected><SuccessStockAdjustment/></AdminProtected>
   }
 ])
 

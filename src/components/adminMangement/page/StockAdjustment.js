@@ -46,7 +46,8 @@ const StockAdjustment = () => {
     }
 
     const handle_onClick = (list) => {
-        navigate('add' ,{state:list})
+        if(list.status == 'ฉบับร่าง') return navigate('add' ,{state:list})
+        if(list.status == 'สำเร็จ') return navigate('success' ,{state:list})
     }
 
     useEffect(() => {
