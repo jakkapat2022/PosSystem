@@ -3,6 +3,7 @@ import { SideBar , Container} from '../../SideBar'
 import { useNav } from '../../layout/Nav'
 import TotalOparating from '../component/dashbroad/TotalOparating'
 import SearchOparating from '../component/dashbroad/SearchOparating'
+import TotalBill from '../component/dashbroad/TotalBills'
 import './css/dashboard.css'
 
 const Dashboard = () => {
@@ -16,21 +17,29 @@ const Dashboard = () => {
     <Container sideBar={showSideBar} className='container con-ani'>
         <div className='dash-con'>
           <div className='dash-grid'>
-            <SearchOparating
-              setEndDate={setEndDate}
-              setStartDate={setStartDate}
-              startDate={startDate}
-              endDate={endDate}
-            />
+            <div id='schOpa'>
+              <SearchOparating
+                setEndDate={setEndDate}
+                setStartDate={setStartDate}
+                startDate={startDate}
+                endDate={endDate}
+              />
+            </div>
+            
             <TotalOparating
               start={startDate}
               end={endDate}
             />
+           <TotalBill 
+              start={startDate}
+              end={endDate}/>
+            <TotalBill 
+            start={startDate}
+            end={endDate}/>
           </div>
         </div>
     </Container>
     </>
-    
   )
 }
 

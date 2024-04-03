@@ -30,6 +30,8 @@ import StockAdjustment from './components/adminMangement/page/StockAdjustment';
 import AddStockAdjustment from './components/adminMangement/page/AddStockAdjustment';
 import SuccessStockAdjustment from './components/adminMangement/page/SuccessStockAdjustment';
 
+import TotalBill from './components/adminMangement/component/dashbroad/TotalBills';
+
 const router = createBrowserRouter([
   {
     path:"/",
@@ -112,7 +114,11 @@ const router = createBrowserRouter([
   {
     path: '/admin/stock/stockadjustment/success',
     element: <AdminProtected><SuccessStockAdjustment/></AdminProtected>
-  }
+  },
+  {
+    path: '/test',
+    element: <TotalBill/>
+  },
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

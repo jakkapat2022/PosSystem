@@ -1,29 +1,13 @@
 import React,{ useEffect, useState } from 'react'
 import '../../page/css/searchopa.css'
-import { TbCalendarSearch } from "react-icons/tb";
 import { PiArrowFatDownFill } from "react-icons/pi";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { getdataDashBroad } from './getdataDashBroad';
-let api_url = process.env.REACT_APP_API_URL
 
 const SearchOparating = ({startDate,setStartDate,endDate,setEndDate}) => {
 
-    //console.log("startDate" , startDate)
-    //console.log("endDate" , endDate)
     let date = new Date()
-
-    const getApi = async () => {
-        const _class = new getdataDashBroad(api_url,startDate,endDate)
-        const result = await _class.getTotalOpaSelected();
-        console.log(result)
-    }
-
-    useEffect(() => {
-        if(!startDate || !endDate) return
-
-        getApi();
-    },[startDate,endDate])
+    
   return (
     <div className='search-opa'>
         <div className='searchopa-input'>
@@ -50,6 +34,23 @@ const SearchOparating = ({startDate,setStartDate,endDate,setEndDate}) => {
                 
                 minDate={startDate || date}/>
         </div>
+
+        {/* {[result].map((val,id) => (
+            <div>
+                <h3>{id}</h3>
+                <h4>{val.income}</h4>
+            </div>
+        ))} */}
+
+        {/* <div>
+            <h1>Total Bill Amount</h1>
+            {Object.keys(result).map(index => (
+                <div key={index}>
+                    <p>{index}</p>
+                    <p>Total: {result[index].income} THB</p>
+                </div>
+            ))}
+        </div> */}
     </div>
   )
 }

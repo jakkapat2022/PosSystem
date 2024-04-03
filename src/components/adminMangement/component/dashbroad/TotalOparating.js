@@ -46,14 +46,14 @@ const TotalOparating = ({ start , end }) => {
             <img src={Profit} alt={Profit}/>
             <strong>กำไร</strong>
         </div>
-        <h3 id='result'>{totalOpa?.profit?.totalProfits} บาท</h3>
+        <h3 id='result'>{totalOpa?.profit} บาท</h3>
       </div>
       <div id='revenue' className='item'>
         <div id='totalOpaHeader'>
             <img src={Bill} alt={Bill}/>
             <strong>จำนวนบิลที่ขายได้</strong>
         </div>
-        <h3 id='total-bill'>{totalOpa?.bill?.totalBills}</h3>
+        <h3 id='total-bill'>{totalOpa?.income?.bills}</h3>
       </div>
     </div>
     </>
