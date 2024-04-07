@@ -90,8 +90,7 @@
 
 .totalOpa .item{
     justify-content: flex-start;
-    box-sizing: border-box;
-    width: 200px;
+    width: 220px;
     height: 100px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     padding: 0.5rem;
@@ -133,12 +132,58 @@
 .table-income {
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     border-radius: 10px;
-    padding: 1rem;
-    width: 600px;
-    height: 300px;
+    width: 500px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.table-income section {
+    margin: 0.7rem 0rem;
+    margin-right: 2rem;
+    align-self: flex-end;
+}
+
+.table-income section strong{
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0rem 1rem;
+    transition: all 0.5 ease;
+
+    &:hover{
+        border-bottom: 2px solid #1f1f1f;
+    }
+}
+
+.table-income section .stronged{
+    border-bottom: 2px solid #1f1f1f;
 }
 
 #schOpa{
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
+
+#schOpa .box{
+    width: 50%;
+    margin-left: 1rem;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+#totalOpa{
+    width: 450px;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+    .dash-con .dash-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+}
+

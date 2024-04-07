@@ -4,6 +4,8 @@ import { useNav } from '../../layout/Nav'
 import TotalOparating from '../component/dashbroad/TotalOparating'
 import SearchOparating from '../component/dashbroad/SearchOparating'
 import TotalBill from '../component/dashbroad/TotalBills'
+import Totallasttestbill from '../component/dashbroad/Totallasttestbill'
+import TotalProduct from '../component/dashbroad/TotalProduct'
 import './css/dashboard.css'
 
 const Dashboard = () => {
@@ -17,6 +19,12 @@ const Dashboard = () => {
     <Container sideBar={showSideBar} className='container con-ani'>
         <div className='dash-con'>
           <div className='dash-grid'>
+            <div id='totalOpa'>
+              <TotalOparating
+                start={startDate}
+                end={endDate}
+              />
+            </div>
             <div id='schOpa'>
               <SearchOparating
                 setEndDate={setEndDate}
@@ -24,18 +32,14 @@ const Dashboard = () => {
                 startDate={startDate}
                 endDate={endDate}
               />
+              <Totallasttestbill/>
             </div>
-            
-            <TotalOparating
-              start={startDate}
-              end={endDate}
-            />
            <TotalBill 
               start={startDate}
               end={endDate}/>
-            <TotalBill 
-            start={startDate}
-            end={endDate}/>
+             <TotalProduct 
+              start={startDate}
+              end={endDate}/>
           </div>
         </div>
     </Container>

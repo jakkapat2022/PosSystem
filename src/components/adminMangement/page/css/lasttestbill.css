@@ -1,0 +1,19 @@
+#schOpa .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#schOpa .box table{
+    text-align: center;
+}
+
+#schOpa .box table tr #bill{
+    width: 40%;
+    text-align: start;
+}
+
+#schOpa .box table tr #total{
+    width: 40%;
+    text-align: end;
+}
